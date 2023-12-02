@@ -1,0 +1,24 @@
+$ff-main-regular: "Montserrat", "Arial", sans-serif;
+
+$colorTransparent: transparent;
+$colorBackgroundWhite: #FFFFFF;
+$colorBackgroundLight: #F1F4F9;
+$colorBackgroundDark: #091336;
+$colorFontWhite: white;
+$colorFontPlaceholder: white;
+$colorFontDark: #22356F;
+
+$colorButtonHover: #22356F;
+$colorButtonActive: #22356F;
+
+:export {
+    colorTransparent: $colorTransparent;
+    colorBackgroundLight: $colorBackgroundLight;
+    colorBackgroundDark: $colorBackgroundDark;
+    colorButtonHover: $colorButtonHover;
+    colorButtonActive: $colorButtonActive;
+    colorFontWhite: $colorFontWhite;
+    colorFontPlaceholder: $colorFontPlaceholder;
+    colorFontDark: $colorFontDark;
+    ffMainRegular: $ff-main-regular;
+}
