@@ -1,24 +1,28 @@
-$ff-main-regular: "Montserrat", "Arial", sans-serif;
+$ff-main-regular: 'Open Sans', "Arial", sans-serif;
 
 $colorTransparent: transparent;
 $colorBackgroundWhite: #FFFFFF;
 $colorBackgroundLight: #F1F4F9;
+$colorBackgroundBar: #DEE6F5;
 $colorBackgroundDark: #091336;
 $colorFontWhite: white;
+$colorFontLight: #899CB1;
 $colorFontPlaceholder: white;
-$colorFontDark: #22356F;
-
-$colorButtonHover: #22356F;
-$colorButtonActive: #22356F;
+$colorFontDark: #122945;
+$colorSuccess: #00A775;
+$colorMiddle: #FFD500;
+$colorBad: #EA1A4F;
 
 :export {
     colorTransparent: $colorTransparent;
     colorBackgroundLight: $colorBackgroundLight;
     colorBackgroundDark: $colorBackgroundDark;
-    colorButtonHover: $colorButtonHover;
-    colorButtonActive: $colorButtonActive;
     colorFontWhite: $colorFontWhite;
     colorFontPlaceholder: $colorFontPlaceholder;
     colorFontDark: $colorFontDark;
     ffMainRegular: $ff-main-regular;
+    colorSuccess: $colorSuccess;
+    colorMiddle: $colorMiddle;
+    colorBad: $colorBad;
+    colorBackgroundBar: $colorBackgroundBar;
 }
