@@ -5,7 +5,7 @@ export const DateSelectHeader = () => {
         <>
             {<button> prev select</button>}
             {<>date icon</>}
-            <StockSelect />
+            {/* <StockSelect /> */}
             {<button> next select</button>}
         </>
     )

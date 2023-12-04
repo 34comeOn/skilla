@@ -1,0 +1,17 @@
+@import '/src/sass/variables.module.scss';
+
+.select_item {
+    min-width: 204px;
+    min-height: 40px;
+    cursor: pointer;
+    display: flex;
+    padding: 0px 20px;
+    align-items: center;
+    font-size: 15px;
+    color: $colorFontLight;
+
+    &:hover {
+        background-color: $colorBackgroundHover;
+        color: $colorFontBright;
+    }
+}
