@@ -5,7 +5,7 @@ export const Bar = ({progressRatio, resultColor}: {progressRatio: number, result
     return(
         <>
             <StyledBackgroundBar />
-            <StyledBar progressRatio={progressRatio} resultColor={resultColor} />
+            <StyledBar $progressRatio={progressRatio} $resultColor={resultColor} />
         </>
     )
 }

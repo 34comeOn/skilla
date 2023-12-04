@@ -7,7 +7,9 @@ $colorBackgroundBar: #DEE6F5;
 $colorBackgroundDark: #091336;
 $colorFontWhite: white;
 $colorFontLight: #899CB1;
+$colorFontSecondary: #5E7793;
 $colorFontPlaceholder: white;
+$colorFontBright: #002CFB;
 $colorFontDark: #122945;
 $colorSuccess: #00A775;
 $colorMiddle: #FFD500;
@@ -25,4 +27,6 @@ $colorBad: #EA1A4F;
     colorMiddle: $colorMiddle;
     colorBad: $colorBad;
     colorBackgroundBar: $colorBackgroundBar;
+    colorFontBright: $colorFontBright;
+    colorFontSecondary: $colorFontSecondary;
 }
