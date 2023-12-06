@@ -19,6 +19,7 @@ $colorFontDark: #122945;
 $colorSuccess: #00A775;
 $colorMiddle: #FFD500;
 $colorBad: #EA1A4F;
+$colorBackgroundActiveNav: rgba(216, 228, 251, 0.32);
 
 :export {
     colorTransparent: $colorTransparent;
@@ -38,4 +39,6 @@ $colorBad: #EA1A4F;
     colorBackgroundGood: $colorBackgroundGood;
     colorBackgroundMedium: $colorBackgroundMedium;
     colorBackgroundHover: $colorBackgroundHover;
+    colorFontLight: $colorFontLight;
+    colorBackgroundActiveNav: $colorBackgroundActiveNav;
 }

@@ -2,6 +2,16 @@ import { TaccauntData } from 'src/modules/callsPage/components/accountSelect/acc
 import variables from '../sass/variables.module.scss';
 import Boss from 'src/accets/pic/boss-avatar.png';
 import Person from 'src/accets/pic/avatar.png';
+import Calls from 'src/accets/icons/nav-calls.svg';
+import Agents from 'src/accets/icons/nav-agents.svg';
+import Results from 'src/accets/icons/nav-results.svg';
+import Orders from 'src/accets/icons/nav-orders.svg';
+import Mail from 'src/accets/icons/nav-mail.svg';
+import Docs from 'src/accets/icons/nav-docs.svg';
+import Performers from 'src/accets/icons/nav-performers.svg';
+import Reports from 'src/accets/icons/nav-reports.svg';
+import Knowledge from 'src/accets/icons/nav-knowledge.svg';
+import Settings from 'src/accets/icons/nav-settings.svg';
 import { PositiveBorderGrade } from 'src/modules/accountContainer/components/grades/positive/positiveBorderGrade';
 import { NegativeBorderGrade } from 'src/modules/accountContainer/components/grades/negative/negativeBorderGrade';
 import { MediumBorderGrade } from 'src/modules/accountContainer/components/grades/medium/mediumBorderGrade';
@@ -141,6 +151,87 @@ export const ACCOUNT_IP_SELECT_DATA = [
     'ИП Митрофанов М.М.',
     'ИП Иванов М.М.',
     'Все организации',
+]
+
+export type TnavigationItem = {
+    icon: string,
+    alt: string,
+    title: string,
+    url: string,
+    isActive: boolean,
+}
+
+export const NAVIGATION_DATA: TnavigationItem[] = [
+    {
+        icon: Results,
+        alt: 'results icon',
+        title: 'Итоги',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Orders,
+        alt: 'orders icon',
+        title: 'Заказы',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Mail,
+        alt: 'mail icon',
+        title: 'Сообщения',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Calls,
+        alt: 'calls icon',
+        title: 'Звонки',
+        url: 'http://localhost:3000/',
+        isActive: true,
+    },
+    {
+        icon: Agents,
+        alt: 'agents icon',
+        title: 'Контрагенты',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Docs,
+        alt: 'docs icon',
+        title: 'Документы',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Performers,
+        alt: 'performers icon',
+        title: 'Исполнители',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Reports,
+        alt: 'reports icon',
+        title: 'Отчеты',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Knowledge,
+        alt: 'knowledge icon',
+        title: 'База знаний',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
+    {
+        icon: Settings,
+        alt: 'settings icon',
+        title: 'Настройки',
+        url: 'http://localhost:3000/',
+        isActive: false,
+    },
 ]
 
 const selectDataNodes = [
