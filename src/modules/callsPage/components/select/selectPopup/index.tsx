@@ -1,6 +1,6 @@
-import { ReactNode } from 'react'
-import { SelectItem } from './selectItem'
-import './style.scss'
+import { ReactNode } from 'react';
+import { SelectItem } from './selectItem';
+import './style.scss';
 
 export type TselectPupup = {
     selectList: string[] | ReactNode[],
