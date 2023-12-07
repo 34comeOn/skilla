@@ -1,0 +1,31 @@
+@import '/src/sass/variables.module.scss';
+@import '/src/sass/mixin.scss';
+
+.date-select_container {
+    display: flex;
+    align-items: center;
+    min-width: 115px;
+    height: 24px;
+    margin-left: 48px;
+}
+
+.selector-title_box {
+    display: flex;
+    align-items: center;
+    min-width: 58px;
+    height: 19px;
+    margin-left: 22px;
+    margin-right: 10px;
+}
+
+.selector-title_icon {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.chevron-button_side {
+    width: 10px;
+    height: 15px;
+    cursor: pointer;
+    @include tag-button_hide;
+}

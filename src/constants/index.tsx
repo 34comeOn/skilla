@@ -234,7 +234,7 @@ export const NAVIGATION_DATA: TnavigationItem[] = [
     },
 ]
 
-const selectDataNodes = [
+export const selectDataNodes = [
     'Все организации',
     'ООО Грузчиков Сервис Запад',
     <PositiveBorderGrade />,
@@ -244,3 +244,17 @@ const selectDataNodes = [
     <MediumDotGrade />,
     <NegativeDotGrade />,
 ]
+
+export const callsPeriodSelectData = [
+    '3 дня',
+    'Неделя',
+    'Месяц',
+    'Год',
+    'Указать даты компонент',
+]
+// <PositiveBorderGrade />,
+// <NegativeBorderGrade />,
+// <MediumBorderGrade />,
+// <PositiveDotGrade />,
+// <MediumDotGrade />,
+// <NegativeDotGrade />,

@@ -5,9 +5,11 @@ import { useOutsideMouseDown } from "src/myHooks/useOutsideMouseDown";
 
 type TselectData = {
     data: string[] | ReactNode[],
+    ishovered?: string,
+    isDateSelect?: boolean,
 }
 
-export const StockSelect = ({data}: TselectData) => {
+export const StockSelect = ({data, ishovered, isDateSelect}: TselectData) => {
     const [currrentSelectItem, setCurrrentSelectItem]=useState(data[0]);
     const [isSelectorOpen, setIsSelectorOpen]=useState(false);
 
@@ -27,7 +29,7 @@ export const StockSelect = ({data}: TselectData) => {
   
     return (
         <div ref={wrapperRef} style={{position: 'relative'}}>
-            <StockSelectHeader  title={currrentSelectItem} isSelectorOpen={isSelectorOpen} toggleSelectorHandler={toggleSelectorHandler} />
+            <StockSelectHeader isDateSelect={isDateSelect} isParentHovered={ishovered} title={currrentSelectItem} isSelectorOpen={isSelectorOpen} toggleSelectorHandler={toggleSelectorHandler} />
             {isSelectorOpen && <SelectPopup selectList={data} toggleSelectorHandler={toggleSelectorHandler} setTitleHandler={setTitleHandler} />}
         </div>
     )
