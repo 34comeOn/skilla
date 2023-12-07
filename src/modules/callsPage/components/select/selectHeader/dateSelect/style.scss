@@ -15,7 +15,7 @@
     min-width: 58px;
     height: 19px;
     margin-left: 22px;
-    margin-right: 10px;
+    margin-right: 16px;
 }
 
 .selector-title_icon {
@@ -26,6 +26,7 @@
 .chevron-button_side {
     width: 10px;
     height: 15px;
+    padding-right: 14px;
     cursor: pointer;
     @include tag-button_hide;
 }

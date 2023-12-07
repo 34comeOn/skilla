@@ -2,6 +2,7 @@ import { TaccauntData } from 'src/modules/callsPage/components/accountSelect/acc
 import variables from '../sass/variables.module.scss';
 import Boss from 'src/accets/pic/boss-avatar.png';
 import Person from 'src/accets/pic/avatar.png';
+import Performer from 'src/accets/pic/performer.png';
 import Calls from 'src/accets/icons/nav-calls.svg';
 import Agents from 'src/accets/icons/nav-agents.svg';
 import Results from 'src/accets/icons/nav-results.svg';
@@ -18,6 +19,9 @@ import { MediumBorderGrade } from 'src/modules/accountContainer/components/grade
 import { PositiveDotGrade } from 'src/modules/accountContainer/components/grades/positive/positiveDotGrade';
 import { MediumDotGrade } from 'src/modules/accountContainer/components/grades/medium/mediumDotGrade';
 import { NegativeDotGrade } from 'src/modules/accountContainer/components/grades/negative/negativeDotGrade';
+import { SelectPerformerItem } from 'src/modules/callsPage/components/select/selectPopup/selectPerformerItem';
+import { SelectCallsItem } from 'src/modules/callsPage/components/select/selectPopup/selectCallsItem';
+import { SelectTextsItem } from 'src/modules/callsPage/components/select/selectPopup/selectTextItem';
 
 export const STATISTIC_DATA = [
     {
@@ -234,27 +238,57 @@ export const NAVIGATION_DATA: TnavigationItem[] = [
     },
 ]
 
-export const selectDataNodes = [
-    'Все организации',
-    'ООО Грузчиков Сервис Запад',
-    <PositiveBorderGrade />,
-    <NegativeBorderGrade />,
-    <MediumBorderGrade />,
-    <PositiveDotGrade />,
-    <MediumDotGrade />,
-    <NegativeDotGrade />,
-]
-
-export const callsPeriodSelectData = [
+export const CALLS_PERIOD_SELECT_DATA = [
     '3 дня',
     'Неделя',
     'Месяц',
     'Год',
     'Указать даты компонент',
 ]
-// <PositiveBorderGrade />,
-// <NegativeBorderGrade />,
-// <MediumBorderGrade />,
-// <PositiveDotGrade />,
-// <MediumDotGrade />,
-// <NegativeDotGrade />,
+
+export const TYPES_SELECT_DATA = [
+    <SelectTextsItem text='Все типы' />,
+    <SelectTextsItem text='Входящие' />,
+    <SelectTextsItem text='Исходящие' />,
+]
+
+export const PERFORMERS_SELECT_DATA = [
+    <SelectTextsItem text='Все сотрудники' />,
+    <SelectPerformerItem name='Константин К.' img={Performer} />,
+    <SelectPerformerItem name='Полина З.' img={Performer} />,
+]
+
+export const CALLS_SELECT_DATA = [
+    <SelectTextsItem text='Все звонки' />,
+    <SelectCallsItem text='Все клиенты' dot={false} />,
+    <SelectCallsItem text='Новые клиенты' dot={true} />,
+    <SelectCallsItem text='Все исполнители' dot={false} />,
+    <SelectCallsItem text='Через приложение' dot={false} />,
+    <SelectCallsItem text='Прочие звонки' dot={false} />,
+]
+
+export const SOURSES_SELECT_DATA = [
+    <SelectTextsItem text='Все источники' />,
+]
+export const GRADES_SELECT_DATA = [
+    <SelectTextsItem text='Все оценки' />,
+    <SelectTextsItem text='Распознать' />,
+    <SelectTextsItem text='Скрипт не использован' />,
+    <NegativeBorderGrade />,
+    <MediumBorderGrade />,
+    <PositiveBorderGrade />,
+    <NegativeDotGrade />,
+    <MediumDotGrade />,
+    <PositiveDotGrade />,
+]
+
+export const ERRORS_SELECT_DATA = [
+    <SelectTextsItem text='Все ошибки' />,
+    <SelectTextsItem text='Приветствие' />,
+    <SelectTextsItem text='Имя' />,
+    <SelectTextsItem text='Цена' />,
+    <SelectTextsItem text='Скидка' />,
+    <SelectTextsItem text='Предзаказ' />,
+    <SelectTextsItem text='Благодарность' />,
+    <SelectTextsItem text='Стоп слова' />,
+]

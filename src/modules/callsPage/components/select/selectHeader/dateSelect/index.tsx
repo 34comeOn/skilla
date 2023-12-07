@@ -1,4 +1,4 @@
-import { callsPeriodSelectData } from "src/constants";
+import { CALLS_PERIOD_SELECT_DATA } from "src/constants";
 import { useHover } from "src/myHooks/useHover";
 import { StockSelect } from "../../stockSelect";
 import Calendar from 'src/accets/icons/calendar.svg';
@@ -22,7 +22,7 @@ export const DateSelect = () => {
             <div className="selector-title_box" {...hover}>
                 {hover.ishovered && <img className="selector-title_icon" src={CalendarHover} alt="calendar icon" width='16px' height='18px' />}
                 {!hover.ishovered && <img className="selector-title_icon" src={Calendar} alt="calendar icon" width='16px' height='18px' />}
-                <StockSelect isDateSelect={true} ishovered={hover.ishovered} data={callsPeriodSelectData} />
+                <StockSelect isDateSelect={true} ishovered={hover.ishovered} data={CALLS_PERIOD_SELECT_DATA} />
             </div>
             <button {...rightHover} className="chevron-button_side" > 
                 {!rightHover.ishovered &&  <img src={Right} alt="next date button" width='7px' height='10px' />}
