@@ -1,4 +1,4 @@
-import SearchIcon from '../../../../accets/icons/search.svg';
+import SearchIcon from 'src/accets/icons/search.svg';
 import './style.scss';
 
 export const Search = () => {

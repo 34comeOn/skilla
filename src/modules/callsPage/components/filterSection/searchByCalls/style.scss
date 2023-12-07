@@ -1,0 +1,56 @@
+@import '/src/sass/variables.module.scss';
+@import '/src/sass/mixin.scss';
+
+.search-calls_container {
+    width: 482px;
+    height: 40px;
+}
+
+.search-calls_caption-box {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-calls_caption-icon {
+    margin-right: 12px;
+}
+
+.search-calls_close-button {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    right: 21px;
+    top: 12px;
+
+    @include tag-button_hide;
+}
+
+.search-calls_input-box {
+    position: relative;
+}
+
+.search-calls_input {
+    width: 482px;
+    height: 40px;
+    border-radius: 48px;
+    padding: 10px 0 10px 46px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: $ff-main-regular;
+
+    border: 2px solid $colorBackgroundLight;
+
+    &:active {
+        border: 1px solid gray; 
+    }
+}
+
+.search-calls_input-search-icon {
+    position: absolute;
+    left: 21px;
+    top: 12px;
+}
