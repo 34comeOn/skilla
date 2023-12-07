@@ -1,10 +1,10 @@
+import { ReactNode } from "react";
 import { useHover } from "src/myHooks/useHover";
 import variables from 'src/sass/variables.module.scss';
 import ChevronUp from 'src/accets/icons/up.svg';
 import ChevronDown from 'src/accets/icons/down.svg';
 import ChevronDownHover from 'src/accets/icons/down-hover.svg';
 import './style.scss';
-import { ReactNode } from "react";
 
 type TselectorHeader = {
     toggleSelectorHandler: ()=> void, 

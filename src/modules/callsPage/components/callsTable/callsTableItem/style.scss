@@ -1,0 +1,109 @@
+@import '/src/sass/variables.module.scss';
+
+.table-item__container {
+    width: 100%;
+    height: 65px;
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 40px 23px 119px 68px 17px 275px 343px 160px 392px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        display: block;
+        width: 1400px;
+        height: 1px;
+        top: 0px;
+        background-color: $colorBorder;
+    }
+
+    &:hover {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 275px;
+            display: block;
+            width: 16px;
+            height: 16px;
+            top: 25px;
+            background-image: url('../../../../../accets/icons/phone.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+
+
+
+.table-item__checkbox {
+    margin: auto;
+    width: 16px;
+    height: 16px;
+}
+
+.table-item__type {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.table-item__time {
+    font-size: 15px;
+    display: block;
+    margin: auto;
+}
+
+.table-item__performer {
+    margin: auto;
+    margin-left: 0;
+}
+
+.table-item__web {
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.table-item__call {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-left: 30px;
+} 
+
+.table-item__call span {
+    letter-spacing: -0.7px;
+}
+
+.table-item__call-secondary {
+    color: $colorFontSecondary;
+}
+
+.table-item__sourse {
+    max-width: 197px;
+    text-align: left;
+    padding-left: 72px;
+    color: $colorFontSecondary;
+
+    display: flex;
+    align-items: center;
+}
+
+.table-item__grade {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.table-item__duration {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 40px;
+}

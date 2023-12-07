@@ -1,0 +1,37 @@
+@import '/src/sass/variables.module.scss';
+
+.table-header__container {
+    width: 100%;
+    margin-top: 26px;
+    color: $colorFontLight;
+    letter-spacing: -0.7px;
+
+    display: grid;
+    grid-template-columns: 40px 23px 119px 68px 17px 275px 343px 160px 392px;
+}
+
+.table-header__checkbox {
+    margin: auto;
+    width: 16px;
+    height: 16px;
+}
+
+.table-header__call {
+    text-align: start;
+    padding-left: 30px;
+}
+
+.table-header__sourse {
+    text-align: start;
+    padding-left: 72px;
+}
+
+.table-header__grade {
+    text-align: start;
+}
+
+.table-header__duration {
+    text-align: end;
+    padding-right: 40px;
+}
+
