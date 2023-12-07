@@ -1,11 +1,12 @@
+import { ResetFilters } from './resetFilters';
 import { SearchByCalls } from './searchByCalls';
 import './style.scss';
 
 export const FiltersSection = () => {
     return(
-        <div>
+        <div className='filters-section_container'>
             <SearchByCalls />
-            <>Refresh filters</>
+            <ResetFilters />
             <>selects block</>
         </div>
     )
