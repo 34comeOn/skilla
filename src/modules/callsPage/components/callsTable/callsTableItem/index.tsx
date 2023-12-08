@@ -8,13 +8,13 @@ import Performer from 'src/accets/pic/performer.png';
 import './style.scss';
 import { TableCheckbox } from './tableCheckbox';
 
-export const CallsTableItem = ({setHoverHandler, unHoverHandler}: {setHoverHandler: ()=> void,unHoverHandler:()=> void }) => {
+export const CallsTableItem = ({setHoverHandler, unhoverHandler}: {setHoverHandler: ()=> void,unhoverHandler:()=> void }) => {
     const {ishovered, onMouseEnter, onMouseLeave} = useHover();
 
     return(
         <li 
             onMouseEnter={()=> {setHoverHandler();onMouseEnter();}}  
-            onMouseLeave={()=> {unHoverHandler();onMouseLeave();}}  
+            onMouseLeave={()=> {unhoverHandler();onMouseLeave();}}  
             style={{
                 backgroundColor: `${ishovered? variables.colorBackgroundActiveNav : variables.colorBackgroundWhite}`,
                 userSelect: 'none'

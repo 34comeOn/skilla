@@ -23,6 +23,8 @@ import { SelectPerformerItem } from 'src/modules/callsPage/components/select/sel
 import { SelectCallsItem } from 'src/modules/callsPage/components/select/selectPopup/selectCallsItem';
 import { SelectTextsItem } from 'src/modules/callsPage/components/select/selectPopup/selectTextItem';
 
+export const TOKEN = 'testtoken';
+
 export const STATISTIC_DATA = [
     {
         title: 'Новые звонки', 

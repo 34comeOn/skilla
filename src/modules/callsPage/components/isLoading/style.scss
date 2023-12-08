@@ -1,0 +1,23 @@
+@import '/src/sass/variables.module.scss';
+
+.loading-box {
+    display: flex;
+    align-items: center;
+    color: $colorFontLight;
+    height: 400px;
+}
+
+.loading-icon {
+    margin-right: 10px;
+    transition-property: transform;
+    transition-duration: 1s;
+    animation-name: rotate; 
+    animation-duration: 0.5s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}

@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useCheckboxHover } from 'src/myHooks/useCheckboxHover';
 import { CallsTableItem } from './callsTableItem';
-import './style.scss';
 import { TableHeader } from './tableHeader';
 
-const data = [
+import './style.scss';
+import { IsLoading } from '../isLoading';
+
+const dataMock = [
     {
         id: 1,
     },
@@ -15,23 +17,28 @@ const data = [
     },
 ]
 
-export const CallsTable = () => {
-    const [ishovered, setIsHovered] = useState('');
+export const CallsTable = ({isError, isLoading}: {isError: boolean, isLoading: boolean}) => {
+    const {ishovered, setHoverHandler, unhoverHandler} = useCheckboxHover();
 
-    const setHoverHandler = () => {
-        setIsHovered('true')
-    }
-    const unHoverHandler = () => {
-        setIsHovered('')
-    }
+    if (isLoading) {
+        return(
+            <IsLoading />
+        )
+    } 
 
+    if (isError) {
+        return(
+            <>Ошибка загрузки данных</>
+        )
+    }
+    
     return(
         <div className='calls-table__container'>
             <TableHeader ishovered={ishovered} />
             <ul className='calls-table__list'>
-                {data.map(({id})=> {
+                {dataMock.map(({id})=> {
                     return(
-                        <CallsTableItem key={id} setHoverHandler={setHoverHandler} unHoverHandler={unHoverHandler}/>
+                        <CallsTableItem key={id} setHoverHandler={setHoverHandler} unhoverHandler={unhoverHandler}/>
                     )
                 })}
             </ul>

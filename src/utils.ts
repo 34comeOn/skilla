@@ -1,3 +1,4 @@
+import { TOKEN } from "./constants";
 import { TallAccauntData } from "./modules/callsPage/components/accountSelect/accountSelectPupup";
 
 const getCurrentDate = () => {
@@ -32,4 +33,14 @@ export const sortByTheRoles = (unsortedData: TallAccauntData) => {
         }
     }
     return dataSortedByRoles
+}
+
+const options = {
+    method: 'POST',
+    headers: {'Authorization': `Bearer ${TOKEN}`}
+}
+
+export const fetchCalls = async (callType: string) => {
+    const res = await fetch(`https://api.skilla.ru/mango/getList?date_start=2023-11-29&date_end=2023-11-30${callType}`, options)
+    return res.json();
 }
