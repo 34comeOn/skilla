@@ -1,24 +1,13 @@
 import { useCheckboxHover } from 'src/myHooks/useCheckboxHover';
 import { CallsTableItem } from './callsTableItem';
 import { TableHeader } from './tableHeader';
-
 import './style.scss';
 import { IsLoading } from '../isLoading';
-
-const dataMock = [
-    {
-        id: 1,
-    },
-    {
-        id: 2,
-    },
-    {
-        id: 3,
-    },
-]
+import { useCallsPageStore } from './callsPageStore';
 
 export const CallsTable = ({isError, isLoading}: {isError: boolean, isLoading: boolean}) => {
     const {ishovered, setHoverHandler, unhoverHandler} = useCheckboxHover();
+    const callsData = useCallsPageStore(state => state.callsData);
 
     if (isLoading) {
         return(
@@ -36,9 +25,9 @@ export const CallsTable = ({isError, isLoading}: {isError: boolean, isLoading: b
         <div className='calls-table__container'>
             <TableHeader ishovered={ishovered} />
             <ul className='calls-table__list'>
-                {dataMock.map(({id})=> {
+                {callsData.map((item)=> {
                     return(
-                        <CallsTableItem key={id} setHoverHandler={setHoverHandler} unhoverHandler={unhoverHandler}/>
+                        <CallsTableItem item={item} key={item.id} setHoverHandler={setHoverHandler} unhoverHandler={unhoverHandler}/>
                     )
                 })}
             </ul>
