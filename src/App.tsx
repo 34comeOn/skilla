@@ -1,8 +1,13 @@
 import React from 'react';
+import './App.scss';
+import { AccountContainer } from './modules/accountContainer';
+import { MainMenu } from './modules/mainMenu';
 
 function App() {
   return (
-    <div>Skilla
+    <div className='App'>
+      <MainMenu />
+      <AccountContainer />
     </div>
   );
 }

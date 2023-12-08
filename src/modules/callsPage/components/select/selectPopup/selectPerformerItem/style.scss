@@ -1,0 +1,11 @@
+@import '/src/sass/variables.module.scss';
+
+.select-performer_box {
+    display: flex;
+    align-items: center;
+}
+
+.select-performer_text {
+    margin-left: 8px;
+    font-size: 14px;
+}

@@ -1,0 +1,15 @@
+@import '/src/sass/variables.module.scss';
+
+.calls-table__container {
+    width: 100%;
+    border-radius: 8px;
+    height: max-content;
+    margin-top: 20px;
+    background-color: $colorBackgroundWhite;
+    text-align: center;
+}
+
+.calls-table__list {
+    list-style: none;
+    padding: 0;
+}

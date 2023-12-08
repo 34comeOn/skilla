@@ -1,0 +1,29 @@
+@import '/src/sass/variables.module.scss';
+
+.menu_button-box {
+    position: relative;
+    width: 100%;
+    height: max-content;
+}
+
+.menu_button {
+    width: 200px;
+    height: 52px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: $colorBackgroundBright;
+    display: block;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: $colorFontWhite;
+    position: relative;
+    margin: 0 auto 32px auto;
+}
+
+.menu_button-icon {
+    position: absolute;
+    right: 36px;
+    top: 14px;
+}

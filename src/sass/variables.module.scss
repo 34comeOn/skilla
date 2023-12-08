@@ -1,0 +1,46 @@
+$ff-main-regular: 'Open Sans', "Arial", sans-serif;
+
+$colorTransparent: transparent;
+$colorBackgroundWhite: #FFFFFF;
+$colorBackgroundLight: #F1F4F9;
+$colorBackgroundBar: #DEE6F5;
+$colorBackgroundGood: #DBF8EF;
+$colorBackgroundBad: #FEE9EF;
+$colorBackgroundMedium: #ADBFDF;
+$colorBorder: #EAF0FA;
+$colorBackgroundDark: #091336;
+$colorBackgroundHover: rgba(0, 44, 251, 0.13);
+$colorFontWhite: white;
+$colorFontLight: #899CB1;
+$colorFontSecondary: #5E7793;
+$colorFontPlaceholder: white;
+$colorFontBright: #002CFB;
+$colorBackgroundBright: #005FF8;
+$colorFontDark: #122945;
+$colorSuccess: #00A775;
+$colorMiddle: #FFD500;
+$colorBad: #EA1A4F;
+$colorBackgroundActiveNav: rgba(216, 228, 251, 0.32);
+
+:export {
+    colorTransparent: $colorTransparent;
+    colorBackgroundLight: $colorBackgroundLight;
+    colorBackgroundDark: $colorBackgroundDark;
+    colorFontWhite: $colorFontWhite;
+    colorFontPlaceholder: $colorFontPlaceholder;
+    colorFontDark: $colorFontDark;
+    ffMainRegular: $ff-main-regular;
+    colorSuccess: $colorSuccess;
+    colorMiddle: $colorMiddle;
+    colorBad: $colorBad;
+    colorBackgroundBar: $colorBackgroundBar;
+    colorFontBright: $colorFontBright;
+    colorFontSecondary: $colorFontSecondary;
+    colorBackgroundBad: $colorBackgroundBad;
+    colorBackgroundGood: $colorBackgroundGood;
+    colorBackgroundMedium: $colorBackgroundMedium;
+    colorBackgroundHover: $colorBackgroundHover;
+    colorFontLight: $colorFontLight;
+    colorBackgroundActiveNav: $colorBackgroundActiveNav;
+    colorBackgroundWhite: $colorBackgroundWhite;
+}

@@ -1,0 +1,18 @@
+@import '/src/sass/variables.module.scss';
+
+body {
+  margin: 0;
+  font-family: $ff-main-regular;
+  list-style: none;
+  overflow: inherit;
+  background-color: $colorBackgroundLight;
+  font-size: 14px;
+}
+
+.App {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 240px auto;
+  width: 1920px;
+  margin: 0 auto;
+}

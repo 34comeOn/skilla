@@ -1,0 +1,19 @@
+@import '/src/sass/variables.module.scss';
+
+.select-calls_box {
+    display: flex;
+    align-items: center;
+}
+
+.select-calls_text {
+    font-size: 14px;
+}
+
+.select-calls_dot {
+    margin-left: 8px;
+    margin-top: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $colorMiddle;
+}

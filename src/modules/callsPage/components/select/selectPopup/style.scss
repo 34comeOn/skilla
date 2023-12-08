@@ -1,0 +1,19 @@
+@import '/src/sass/variables.module.scss';
+
+.select_list {
+    min-width: 204px;
+    min-height: 40px;
+    width: max-content;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+    border: solid 1px $colorBorder;
+    border-radius: 4px;
+    background-color: $colorBackgroundWhite;
+    list-style: none;
+    z-index: 5;
+
+    position: absolute;
+    right: 4px;
+    top: 35px;
+}

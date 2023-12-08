@@ -1,0 +1,17 @@
+@import '/src/sass/variables.module.scss';
+
+.logout_popover {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: max-content;
+    height: max-content;
+    box-sizing: border-box;
+    border: solid 1px $colorBorder;
+    border-radius: 4px;
+    background-color: $colorBackgroundWhite;
+    padding: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+}

@@ -1,0 +1,10 @@
+@import '/src/sass/variables.module.scss';
+
+.selects-block_container {
+    margin-left: auto;
+    width: 765px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

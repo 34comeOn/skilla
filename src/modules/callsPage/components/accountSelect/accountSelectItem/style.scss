@@ -1,0 +1,36 @@
+@import '/src/sass/variables.module.scss';
+
+.account-select_item {
+    min-width: 164px;
+    min-height: 40px;
+    cursor: pointer;
+    
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    font-size: 15px;
+    color: $colorFontBright;
+
+    &:hover {
+        background-color: $colorBackgroundHover;
+    }
+}
+
+.select_item-img {
+    vertical-align: middle;
+    margin-left: 31px;
+    margin-right: 12px;
+}
+
+.select_item-span {
+    margin-right: auto;
+    letter-spacing: -0.5px;
+}
+
+.select_login-box {
+    display: flex;
+    align-items: center;
+}
+.select_login-img {
+    margin-right: 19px;
+}
