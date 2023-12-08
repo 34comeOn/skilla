@@ -1,25 +1,17 @@
 import { create } from "zustand";
 
 type TcallsPageStore = {
-    datePeriodFilter: string, 
-    callTypeFilter: string, 
-    callDurarionFilter: string, 
-    setDatePeriodFilter: (newPeriod:string ) => void
-    setCallTypeFilter: (newCallType:string ) => void
-    setCallDurarionFilter: (newCallDurarion:string ) => void
+    allFiltersResult: string, 
+    resetFiltersResult: () => void,
+    replaceFilter: (noldFilterValue:string, newFilterValue:string ) => void,
 }
 
 export const useCallsPageStore = create<TcallsPageStore>((set)=>({
-    datePeriodFilter: '3 дня',
-    callTypeFilter: '',
-    callDurarionFilter: '',
-    setDatePeriodFilter: (newPeriod:string ) => set( state => ({
-        datePeriodFilter: newPeriod
+    allFiltersResult: '&date_start=2023-12-05&date_end=2023-12-08',
+    resetFiltersResult: ( ) => set( state => ({
+        allFiltersResult: '&date_start=2023-12-05&date_end=2023-12-08'
     })),
-    setCallTypeFilter: (newCallType:string ) => set( state => ({
-        callTypeFilter: newCallType
-    })),
-    setCallDurarionFilter: (newCallDurarion:string ) => set( state => ({
-        callDurarionFilter: newCallDurarion
+    replaceFilter: (oldFilterValue:string, newFilterValue:string ) => set( state => ({
+        allFiltersResult: state.allFiltersResult.replace(oldFilterValue, newFilterValue) || `${state.allFiltersResult}${newFilterValue}`
     })),
 }))

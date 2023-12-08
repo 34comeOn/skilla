@@ -152,11 +152,26 @@ export const ACCOUNT_DATA: TallAccauntData = [
 ]
 
 export const ACCOUNT_IP_SELECT_DATA = [
-    'ИП Сидорова Александра Михайловна',
-    'ООО Грузчиков Сервис Запад',
-    'ИП Митрофанов М.М.',
-    'ИП Иванов М.М.',
-    'Все организации',
+    {
+        value:'ИП Сидорова Александра Михайловна',
+        requestValue: '',
+    },
+    {
+        value:'ООО Грузчиков Сервис Запад',
+        requestValue: '',
+    },
+    {
+        value:'ИП Митрофанов М.М.',
+        requestValue: '',
+    },
+    {
+        value:'ИП Иванов М.М.',
+        requestValue: '',
+    },
+    {
+        value:'Все организации',
+        requestValue: '',
+    },
 ]
 
 export type TnavigationItem = {
@@ -241,56 +256,161 @@ export const NAVIGATION_DATA: TnavigationItem[] = [
 ]
 
 export const CALLS_PERIOD_SELECT_DATA = [
-    '3 дня',
-    'Неделя',
-    'Месяц',
-    'Год',
-    'Указать даты компонент',
+    {
+        value:'3 дня',
+        requestValue: '&date_start=2023-12-05&date_end=2023-12-08',
+    },
+    {
+        value:'Неделя',
+        requestValue: '&date_start=2023-12-01&date_end=2023-12-08',
+    },
+    {
+        value:'Месяц',
+        requestValue: '&date_start=2023-11-08&date_end=2023-12-08',
+    },
+    {
+        value:'Год',
+        requestValue: '',
+    },
+    {
+        value:'Указать даты компонент',
+        requestValue: '',
+    },
 ]
 
 export const TYPES_SELECT_DATA = [
-    <SelectTextsItem text='Все типы' />,
-    <SelectTextsItem text='Входящие' />,
-    <SelectTextsItem text='Исходящие' />,
+    {
+        value: <SelectTextsItem text='Все типы' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Входящие' />,
+        requestValue: '&in_out=1',
+    },
+    {
+        value: <SelectTextsItem text='Исходящие' />,
+        requestValue: '&in_out=0',
+    },
 ]
 
 export const PERFORMERS_SELECT_DATA = [
-    <SelectTextsItem text='Все сотрудники' />,
-    <SelectPerformerItem name='Константин К.' img={Performer} />,
-    <SelectPerformerItem name='Полина З.' img={Performer} />,
+    {
+        value: <SelectTextsItem text='Все сотрудники' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectPerformerItem name='Константин К.' img={Performer} />,
+        requestValue: '',
+    },
+    {
+        value: <SelectPerformerItem name='Полина З.' img={Performer} />,
+        requestValue: '',
+    },
 ]
 
 export const CALLS_SELECT_DATA = [
-    <SelectTextsItem text='Все звонки' />,
-    <SelectCallsItem text='Все клиенты' dot={false} />,
-    <SelectCallsItem text='Новые клиенты' dot={true} />,
-    <SelectCallsItem text='Все исполнители' dot={false} />,
-    <SelectCallsItem text='Через приложение' dot={false} />,
-    <SelectCallsItem text='Прочие звонки' dot={false} />,
+    {
+        value: <SelectTextsItem text='Все звонки' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectCallsItem text='Все клиенты' dot={false} />,
+        requestValue: '',
+    },
+    {
+        value: <SelectCallsItem text='Новые клиенты' dot={true} />,
+        requestValue: '',
+    },
+    {
+        value: <SelectCallsItem text='Все исполнители' dot={false} />,
+        requestValue: '',
+    },
+    {
+        value: <SelectCallsItem text='Через приложение' dot={false} />,
+        requestValue: '',
+    },
+    {
+        value: <SelectCallsItem text='Прочие звонки' dot={false} />,
+        requestValue: '',
+    },
 ]
 
 export const SOURSES_SELECT_DATA = [
-    <SelectTextsItem text='Все источники' />,
+    {
+        value: <SelectTextsItem text='Все источники' />,
+        requestValue: '',
+    },
 ]
 export const GRADES_SELECT_DATA = [
-    <SelectTextsItem text='Все оценки' />,
-    <SelectTextsItem text='Распознать' />,
-    <SelectTextsItem text='Скрипт не использован' />,
-    <NegativeBorderGrade />,
-    <MediumBorderGrade />,
-    <PositiveBorderGrade />,
-    <NegativeDotGrade />,
-    <MediumDotGrade />,
-    <PositiveDotGrade />,
+    {
+        value: <SelectTextsItem text='Все оценки' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Распознать' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Скрипт не использован' />,
+        requestValue: '',
+    },
+    {
+        value: <NegativeBorderGrade />,
+        requestValue: '',
+    },
+    {
+        value: <MediumBorderGrade />,
+        requestValue: '',
+    },
+    {
+        value: <PositiveBorderGrade />,
+        requestValue: '',
+    },
+    {
+        value: <NegativeDotGrade />,
+        requestValue: '',
+    },
+    {
+        value: <MediumDotGrade />,
+        requestValue: '',
+    },
+    {
+        value: <PositiveDotGrade />,
+        requestValue: '',
+    },
 ]
 
 export const ERRORS_SELECT_DATA = [
-    <SelectTextsItem text='Все ошибки' />,
-    <SelectTextsItem text='Приветствие' />,
-    <SelectTextsItem text='Имя' />,
-    <SelectTextsItem text='Цена' />,
-    <SelectTextsItem text='Скидка' />,
-    <SelectTextsItem text='Предзаказ' />,
-    <SelectTextsItem text='Благодарность' />,
-    <SelectTextsItem text='Стоп слова' />,
+    {
+        value: <SelectTextsItem text='Все ошибки' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Приветствие' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Имя' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Цена' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Скидка' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Предзаказ' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Благодарность' />,
+        requestValue: '',
+    },
+    {
+        value: <SelectTextsItem text='Стоп слова' />,
+        requestValue: '',
+    },
 ]

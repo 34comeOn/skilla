@@ -1,19 +1,19 @@
-import { ReactNode } from 'react';
+import { TselectValue } from '../../stockSelect';
 import './style.scss';
 
 export type TselectItem = {
-    title: string | ReactNode,
+    value: TselectValue,
     toggleSelectorHandler: ()=> void,
-    setTitleHandler: (title: string | ReactNode)=> void,
+    setValueHandler: (value: TselectValue)=> void,
 }
 
-export const SelectItem = ({title, toggleSelectorHandler, setTitleHandler}: TselectItem) => {
+export const SelectItem = ({value, toggleSelectorHandler, setValueHandler}: TselectItem) => {
     return (
         <li className='select_item' onClick={()=> {
             toggleSelectorHandler();
-            setTitleHandler(title);
+            setValueHandler(value);
             }}>
-            {title}
+            {value.value}
         </li>
     )
 }

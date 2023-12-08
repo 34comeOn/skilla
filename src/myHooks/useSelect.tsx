@@ -1,8 +1,9 @@
-import { ReactNode, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import { TselectValue } from "src/modules/callsPage/components/select/stockSelect";
 import { useOutsideMouseDown } from "./useOutsideMouseDown";
 
-export const useSelect = (data: string[] | ReactNode[]) => {
-    const [currrentSelectItem, setCurrrentSelectItem]=useState(data[0]);
+export const useSelect = (data: TselectValue) => {
+    const [currrentSelectItem, setCurrrentSelectItem]=useState(data);
     const [isSelectorOpen, setIsSelectorOpen]=useState(false);
 
     const toggleSelectorHandler = () => {
@@ -12,12 +13,12 @@ export const useSelect = (data: string[] | ReactNode[]) => {
         setIsSelectorOpen(false)
     }
 
-    const setTitleHandler = (title: string| ReactNode) => {
-        setCurrrentSelectItem(title)
+    const setValueHandler = (value: TselectValue) => {
+        setCurrrentSelectItem(value)
     }
 
     const wrapperRef = useRef<HTMLDivElement>(null);
     useOutsideMouseDown(wrapperRef, closeSelectorHandler);
     
-    return {currrentSelectItem, toggleSelectorHandler, setTitleHandler, wrapperRef, isSelectorOpen}
+    return {currrentSelectItem, toggleSelectorHandler, setValueHandler, wrapperRef, isSelectorOpen}
 }

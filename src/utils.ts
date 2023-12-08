@@ -41,6 +41,6 @@ const options = {
 }
 
 export const fetchCalls = async (callType: string) => {
-    const res = await fetch(`https://api.skilla.ru/mango/getList?date_start=2023-11-29&date_end=2023-11-30${callType}`, options)
+    const res = await fetch(`https://api.skilla.ru/mango/getList?${callType}`, options)
     return res.json();
 }

@@ -7,17 +7,16 @@ import { MainAdjustments } from './components/mainAdjustment';
 import './style.scss';
 
 export const CallsPage = () => {
-    const callsFilters = useCallsPageStore();
-
+    const callsFilters = useCallsPageStore(state => state.allFiltersResult);
+    
     const {data , isLoading, isError} = useQuery(
-    ['calls', ], 
-    ()=> fetchCalls(callsFilters.callTypeFilter),
-    {
-        keepPreviousData: true,
-        refetchOnWindowFocus: false,
-    })
-
-    console.log(data)
+        ['calls', callsFilters], 
+        ()=> fetchCalls(callsFilters),
+        {
+            keepPreviousData: true,
+            refetchOnWindowFocus: false,
+        }
+    )
 
     return(
         <div className='calls-page__container'>
